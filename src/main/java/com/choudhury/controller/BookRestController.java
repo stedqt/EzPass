@@ -79,7 +79,7 @@ public class BookRestController {
     	List<TelematryData> telematryDatas =new ArrayList<TelematryData>();
 	// 1
     	TelematryData data1=new TelematryData();
-    	data1.setDeviceUuid("4f3867017dea3c3fa348");
+    	data1.setDeviceUuid("a623af18010e94ed4d5a");
     	data1.setEmpId(9692L);
     	
     	EmployeeDetails details1=new EmployeeDetails();
