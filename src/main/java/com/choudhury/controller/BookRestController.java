@@ -79,14 +79,15 @@ public class BookRestController {
     	List<TelematryData> telematryDatas =new ArrayList<TelematryData>();
 	// 1
     	TelematryData data1=new TelematryData();
-    	data1.setDeviceUuid("a623af18010e94ed4d5a");
+    	data1.setDeviceUuid("df093c9d3ce02a3947b9");//d72fcd47c632c2b90c16   d728cd47c632c2b90c16
     	data1.setEmpId(9692L);
     	
     	EmployeeDetails details1=new EmployeeDetails();
-    	details1.setEmployeeName("Stephen Hawkings");	
+    	details1.setEmployeeName("Stephen");	
     	details1.setEmpId(9692L);
-    	details1.setUrl("url");
-    	
+    	details1.setUrl("https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAhFAAAAJDkzNzk1MTJkLTM2MmItNDU5NS1iOTkyLWNkZGRiMTI0MjQ4OQ.jpg");
+    	//            holder.address.setText(String.format(Locale.getDefault(), "%.2f",b.getDistance()));//b.getBeaconAddress()
+
     	
     	AttendanceDetails attendanceDetails1=new AttendanceDetails();
     	
@@ -107,7 +108,7 @@ public class BookRestController {
     	Date logoutDate = cal1.getTime();
     	attendanceDetails1.setLogoutTime(logoutDate);
     	
-	    	attendanceDetails1.setConsolidatedHours("8"+" h "+"32");
+	    	attendanceDetails1.setConsolidatedHours("8"+"h "+"32");
 	    	data1.setAttendance(attendanceDetails1);
 	    	data1.setEmployeeDetails(details1);
 	    	
@@ -115,13 +116,13 @@ public class BookRestController {
     	
 	    	// 2
 	    	TelematryData data2=new TelematryData();
-	    	data2.setDeviceUuid("df093c9d3ce02a3947b9");
+	    	data2.setDeviceUuid("3c91837369cb21cf8648");
 	    	data2.setEmpId(10673L);
 	    	//String result = yourString.replaceAll("[-+.^:,]","");
 	    	EmployeeDetails details2=new EmployeeDetails();
-	    	details2.setEmployeeName("Manigandan N");
+	    	details2.setEmployeeName("Mani N");
 	    	details2.setEmpId(10673L);
-	    	details2.setUrl("url");
+	    	details2.setUrl("https://media.licdn.com/mpr/mpr/shrinknp_400_400/AAEAAQAAAAAAAAspAAAAJDBlMmY1OGM1LTc3OTQtNGJhMS05YjI2LTMxZGUzMGVjN2IzNA.jpg");
 	    	
 	    	
 	    	AttendanceDetails attendanceDetails2=new AttendanceDetails();
@@ -152,54 +153,86 @@ public class BookRestController {
 		    telematryDatas.add(data2);
     	
 		 // 3
-	    	TelematryData data3=new TelematryData();
-	    	data3.setDeviceUuid("0000110100001000800000805F9B34FD");
-	    	data3.setEmpId(9693L);
-	    	
-	    	EmployeeDetails detail3=new EmployeeDetails();
-	    	detail3.setEmployeeName("Steve Jobs");
-	    	detail3.setEmpId(9693L);
-	    	detail3.setUrl("url");
+		    TelematryData data3=new TelematryData();
+	    	data3.setDeviceUuid("c9f5ff164055ed7d1922");
+	    	data3.setEmpId(10673L);
+	    	//String result = yourString.replaceAll("[-+.^:,]","");
+	    	EmployeeDetails details3=new EmployeeDetails();
+	    	details3.setEmployeeName("Navin J");
+	    	details3.setEmpId(10673L);
+	    	details3.setUrl("http://bankruptcy-ua.com/images/thumb/missing.png");
 	    	
 	    	
 	    	AttendanceDetails attendanceDetails3=new AttendanceDetails();
 	    	
-	    	attendanceDetails3.setEmpId(9691L);
+	    	attendanceDetails3.setEmpId(10673L);
 	    	attendanceDetails3.setLoginSource("VOY");
-	    	attendanceDetails3.setLogoutSource("VOY");
+	    	attendanceDetails3.setLogoutSource("VPN");
 	    
-	    	cal1.add(Calendar.DATE, -1);
-	    	cal1.add(Calendar.HOUR, -10);
+	    	Calendar cale3 = Calendar.getInstance();
+	    	cale3.add(Calendar.DATE, -3);
 	    	
-	    	Date loginDate2 = cal.getTime();
-	    	attendanceDetails3.setLoginTime(loginDate2);
+	    	Format formatter3 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	    	//String s = formatter.format(date);
+	    	Date loginDatee3 = cal.getTime();
+	    	attendanceDetails3.setLoginTime(loginDatee3);
 	    	
+	    	Calendar cale3out = Calendar.getInstance();
+	    	cale3out.add(Calendar.DATE, -2);
+	    	cale3out.add(Calendar.HOUR, -4);
 	    	
-	    	cal1.add(Calendar.DATE, -1);
-	    	cal1.add(Calendar.HOUR, +1);
-	    	
-	    	Date logoutDate2 = cal1.getTime();
-	    	attendanceDetails3.setLogoutTime(logoutDate2);
-	    	
-	    	//attendanceDetails2.setConsolidatedHours(((logoutDate2.getTime()-loginDate2.getTime())/ (60 * 1000) % 60)+"H "+((logoutDate2.getTime()-loginDate2.getTime())/ (60 * 1000) % 60)+" M");
-		    data3.setAttendance(attendanceDetails2);
-		    data3.setEmployeeDetails(detail3);
-		    	
+	    	Date logoutDatee3 = cale3.getTime();
+	    	attendanceDetails3.setLogoutTime(logoutDatee3);
+	    	System.out.println("TT");
+	    	attendanceDetails3.setConsolidatedHours("9"+" h "+"32");
+		    data3.setAttendance(attendanceDetails3);
+		    System.out.println(attendanceDetails3.getConsolidatedHours());
+		    data3.setEmployeeDetails(details3);
 		    telematryDatas.add(data3);
 		    
-		    
-    	
-    	
-    	
-    	
-    	
-    	
+		    //4
+		    TelematryData data4=new TelematryData();
+		    data4.setDeviceUuid("c9f5ff164055ed7d1923");
+		    data4.setEmpId(1673L);
+	    	//String result = yourString.replaceAll("[-+.^:,]","");
+	    	EmployeeDetails details4=new EmployeeDetails();
+	    	details4.setEmployeeName("Prabhu K");
+	    	details4.setEmpId(10673L);
+	    	details4.setUrl("http://bankruptcy-ua.com/images/thumb/missing.png");
+	    	
+	    	
+	    	AttendanceDetails attendanceDetails4=new AttendanceDetails();
+	    	
+	    	attendanceDetails4.setEmpId(10673L);
+	    	attendanceDetails4.setLoginSource("VPN");
+	    	attendanceDetails4.setLogoutSource("TRL");
+	    
+	    	Calendar cale4 = Calendar.getInstance();
+	    	cale4.add(Calendar.DATE, -3);
+	    	
+	    	Format formatter4 = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+	    	//String s = formatter.format(date);
+	    	Date loginDatee4 = cal.getTime();
+	    	attendanceDetails4.setLoginTime(loginDatee4);
+	    	
+	    	Calendar cale4out = Calendar.getInstance();
+	    	cale4out.add(Calendar.DATE, -2);
+	    	cale4out.add(Calendar.HOUR, -4);
+	    	
+	    	Date logoutDatee4 = cale4.getTime();
+	    	attendanceDetails4.setLogoutTime(logoutDatee4);
+	    	System.out.println("TT");
+	    	attendanceDetails4.setConsolidatedHours("9"+" h "+"32");
+		    data4.setAttendance(attendanceDetails4);
+		    System.out.println(attendanceDetails4.getConsolidatedHours());
+		    data4.setEmployeeDetails(details4);
+		    telematryDatas.add(data4);
     	
     	return telematryDatas;
 	}
 
 
-	@RequestMapping(value = "/add",  method = RequestMethod.POST)
+	@RequestMapping(value = "/check",  method = RequestMethod.POST)
     @ResponseStatus(HttpStatus.CREATED)
     public ObjectWithId addBook(@RequestBody Book book)
     {
