@@ -50,27 +50,14 @@ public class BookRestController {
     	System.out.println("testing1");
         logger.debug("Provider has received request to get person with id: " + id);
         List<TelematryData> telematryDatas= dataSetup();
+        
+        
         TelematryData final1=new TelematryData();
         for(TelematryData telematryData: telematryDatas ){
         	if(id.equalsIgnoreCase(telematryData.getDeviceUuid())){
         		final1=telematryData;
         	}
-        	/*if(id == 2L){
-        		final1=telematryData;
-        		
-        	}
-        	
-        	if(id == 3L){
-        		final1=telematryData;
-        		
-        	}*/
-        	
-        	
-        	
-        	
         }
-        
-        
         return final1;
     }
 
@@ -100,14 +87,14 @@ public class BookRestController {
     	
     	Date loginDate = cal.getTime();
     	attendanceDetails1.setLoginTime(loginDate);
-    	
+       	System.out.println("loginDate "+loginDate);
     	Calendar cal1 = Calendar.getInstance();
     	cal1.add(Calendar.DATE, -1);
     	cal1.add(Calendar.HOUR, -4);
     	
     	Date logoutDate = cal1.getTime();
     	attendanceDetails1.setLogoutTime(logoutDate);
-    	
+    	System.out.println("logoutDate "+logoutDate);
 	    	attendanceDetails1.setConsolidatedHours("8"+"h "+"32");
 	    	data1.setAttendance(attendanceDetails1);
 	    	data1.setEmployeeDetails(details1);
